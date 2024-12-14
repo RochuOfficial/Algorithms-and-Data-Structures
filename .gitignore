@@ -1,0 +1,16 @@
+*.o
+*.exe
+/Mock-test
+/.idea
+
+# CMake
+cmake-build-*/
+
+# File-based project format
+*.iws
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
