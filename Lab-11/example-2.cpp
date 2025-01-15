@@ -62,6 +62,19 @@ struct ComputerStack {
     int size() const {
         return stackSize;
     }
+
+    void freeStack() {
+        if (top != nullptr) {
+            Computer* temp = top;
+            while (top != nullptr) {
+                top = top->next;
+                if (temp != nullptr) {
+                    temp->next = nullptr;
+                }
+                delete temp;
+            }
+        }
+    }
 };
 
 int main() {
@@ -87,5 +100,6 @@ int main() {
 
     cout << endl << "Wynik funkcji pop(): " << stack->pop() << endl;
 
+    delete stack;
     return 0;
 }

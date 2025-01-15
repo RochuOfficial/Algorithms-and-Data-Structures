@@ -133,5 +133,6 @@ int main() {
 
     queue->freeQueue();
     cout << endl << "Czy kolejka jest  pusta?: " << queue->empty() << endl;
+    delete queue;
     return 0;
 }
